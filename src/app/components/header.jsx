@@ -15,28 +15,25 @@ const Header = () => {
     { link: "/product", title: "Product" },
   ];
 
-// close profile popup
-const handleClose=()=>{
-       setTimeout(()=>{
-                setprofileMenu(false)
-       },100)
-}
+  // close profile popup
+  const handleClose = () => {
+    setTimeout(() => {
+      setprofileMenu(false)
+    }, 100)
+  }
 
   return (
     <>
-      <div
-        className="container-fluid w-full  sticky z-50 top-0 bg-gradient-to-r from-green-300 via-white to-pink-300"
- 
+      <div className=" bg-gradient-to-r from-green-300 via-white to-pink-300 sticky z-50 top-0"
       >
-        <nav>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <nav className="container mx-auto ">
+          <div className=" px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <button
                   type="button"
-                  className={`inline-flex items-center justify-center rounded-md p-2 text-gray-400  hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-300 transition duration-300 ${
-                    isMobileMenu ? "rotate-90" : ""
-                  }`}
+                  className={`inline-flex items-center justify-center rounded-md p-2 text-gray-400  hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-300 transition duration-300 ${isMobileMenu ? "rotate-90" : ""
+                    }`}
                   aria-controls="mobile-menu"
                   aria-expanded={isMobileMenu ? "true" : "false"}
                   onClick={() => setIsMobileMenu(!isMobileMenu)}
@@ -73,12 +70,7 @@ const handleClose=()=>{
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="block h-8 w-auto lg:hidden"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
-                  />
-                  <span className="font-sans  font-extrabold">Ecomerce</span>
+                  <span className=" hidden md:block self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ecomerce</span>
                   <img
                     className="hidden h-8 w-auto lg:block"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
@@ -94,12 +86,11 @@ const handleClose=()=>{
                       <NextLink
                         key={index}
                         href={item.link}
-                    
-                        className={`${
-                          router === item.link
-                            ? "bg-gray-900 py-1 px-2 text-white rounded-md  text-sm "
-                            : "text-black"
-                        }`}
+
+                        className={`${router === item.link
+                          ? "bg-purple-600 md:text-[18px] px-2 py-2  text-white rounded-md  font-medium	"
+                          : "text-black md:text-[18px] font-medium	  px-2 py-2 "
+                          }`}
                         aria-current="page"
                       >
                         {item.title}
@@ -108,34 +99,30 @@ const handleClose=()=>{
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-8 sm:pr-0">
-              
+              <div className="absolute inset-y-0 right-0 flex items-center  pr-2 sm:static sm:inset-auto sm:ml-8 sm:pr-0">
+
                 <NextLink href="#" className="">
-                <button type="button" className="text-white bg-gradient-to-r from-purple-600 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg px-3 py-2" >Register</button>
+                  <button type="button" className="text-white bg-gradient-to-r from-purple-600 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg px-3 py-2" >Register</button>
                 </NextLink>
-               
-                     
+
+
                 <button
                   type="button"
                   className="rounded-full p-1 text-gray-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 "
                 >
                   <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor"
                     aria-hidden="true"
+                    className="w-5 h-5 mr-2 ml-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
-                    />
+                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
                   </svg>
+
                 </button>
                 <div className="relative ml-3">
-              
+
                   <div>
                     <button
                       type="button"
@@ -166,7 +153,7 @@ const handleClose=()=>{
                         role="menuitem"
                         tabindex="-1"
                         id="user-menu-item-0"
-                        onClick={()=>handleClose()}
+                        onClick={() => handleClose()}
                       >
                         Your Profile
                       </NextLink>
@@ -176,7 +163,7 @@ const handleClose=()=>{
                         role="menuitem"
                         tabindex="-1"
                         id="user-menu-item-1"
-                        onClick={()=>handleClose()}
+                        onClick={() => handleClose()}
                       >
                         Settings
                       </NextLink>
@@ -186,7 +173,7 @@ const handleClose=()=>{
                         role="menuitem"
                         tabindex="-1"
                         id="user-menu-item-2"
-                        onClick={()=>handleClose()}
+                        onClick={() => handleClose()}
                       >
                         Sign out
                       </NextLink>
@@ -203,13 +190,12 @@ const handleClose=()=>{
                 navData.map((item, index) => (
                   <NextLink
                     key={index}
-                    onClick={()=>setIsMobileMenu(false)}
+                    onClick={() => setIsMobileMenu(false)}
                     href={item.link}
-                    className={`${
-                      router === item.link
-                        ? "bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-                        : "text-black  block rounded-md px-3 py-2 text-base font-medium"
-                    }`}
+                    className={`${router === item.link
+                      ? "bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+                      : "text-black  block rounded-md px-3 py-2 text-base font-medium"
+                      }`}
                     aria-current="page"
                   >
                     {item.title}
@@ -217,8 +203,8 @@ const handleClose=()=>{
                 ))}
             </div>
           </div>
-        </nav>
-      </div>
+        </nav >
+      </div >
     </>
   );
 };
