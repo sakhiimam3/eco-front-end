@@ -24,10 +24,10 @@ const Header = () => {
 
   return (
     <>
-      <div className=" bg-gradient-to-r from-green-300 via-white to-pink-300 sticky z-50 top-0"
+      <div className=" bg-gradient-to-r from-green-300 via-white to-pink-300 sticky z-40 top-0"
       >
         <nav className="container mx-auto ">
-          <div className=" px-2 sm:px-6 lg:px-8">
+          <div >
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <button
