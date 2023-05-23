@@ -31,11 +31,11 @@ const Banner = () => {
   
   return (
     <section className="bg-gradient-to-r from-green-300 via-white to-pink-300  lg:h-auto">
-    <div className="fluid mx-auto ">
-      <div className="px-20  py-10  md:py-20 flex items-center flex-wrap md:flex-nowrap gap-10  md:gap-0">
+    <div className="container mx-auto ">
+      <div className="py-10  md:py-20 flex items-center flex-wrap md:flex-nowrap gap-10  md:gap-0">
         <div className="w-[450px]">
           <h1 className="mb-2 font-bold text-[30px] md:text-[64px] leading-tight">
-            <span className="bg-gradient-to-r from-purple-400 to-indigo-900 via-purple-600 text-transparent bg-clip-text font-bold text-xl text-[40px] md:text-[64px] mr-1">
+            <span className="bg-gradient-to-r from-purple-400 to-indigo-900 via-purple-600 text-transparent bg-clip-text font-bold  text-[30px] md:text-[64px] mr-1">
               Welcome
             </span>
             to Baba Shop

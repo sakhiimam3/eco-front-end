@@ -18,9 +18,9 @@ const Adds = () => {
   ];
   return (
     <>
-      <section className="container mx-auto my-5  rounded-sm">
+      <section className="container mx-auto my-5 rounded">
         <div classNameName="">
-          <div classNameName="grid grid-cols-12">
+          <div>
           <div className="relative">
       <Swiper
         spaceBetween={50}
@@ -55,7 +55,7 @@ const Adds = () => {
         {addimages.map((item,index)=>(
         <SwiperSlide key={index}>
          <div className="w-full h-[300px]">
-         <img className="h-auto w-full rounded-md" src={item} alt="adds_img" />
+         <img className="h-auto w-full" src={item} alt="adds_img" />
          </div>
       </SwiperSlide>
         ))}

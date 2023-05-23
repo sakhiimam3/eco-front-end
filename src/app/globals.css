@@ -75,3 +75,20 @@ p {
   clip-path: polygon(50% 5%, 0% 100%, 100% 100%);
 }
 
+
+
+/* h1 section border style animation  */
+@keyframes borderAnimation {
+  0% {
+    transform: scaleX(0);
+    transform-origin: bottom left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+}
