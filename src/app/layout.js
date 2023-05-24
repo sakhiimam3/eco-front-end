@@ -3,9 +3,11 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Header from './components/header'
 import FooterBottom from './components/footer'
-import Head from 'next/head'
 import { Provider } from "react-redux";
-import { store } from "./redux/store";
+import { store } from "../redux/store";
+import { positions, transitions, Provider as AlertProvider } from "react-alert";
+import AlertTemplate from "react-alert-template-basic";
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,14 +17,20 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-
+  const options = {
+    timeout: 5000,
+    position: positions.BOTTOM_CENTER,
+    transition: transitions.SCALE,
+  };
 
   return (
     <html lang="en">
       <body className={inter.className}>
         <Header />
         <Provider store={store}>
+        <AlertProvider template={AlertTemplate} {...options}>
         {children}
+        </AlertProvider>
         </Provider>
         <FooterBottom />
       

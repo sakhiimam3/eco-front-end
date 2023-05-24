@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
+
 SwiperCore.use([Autoplay]);
 
 const Adds = () => {
@@ -19,7 +21,7 @@ const Adds = () => {
   return (
     <>
       <section className="container mx-auto my-5 rounded">
-        <div classNameName="">
+        <div>
           <div>
           <div className="relative">
       <Swiper

@@ -1,10 +1,9 @@
 "use client"
 
 import { configureStore } from "@reduxjs/toolkit";
-import dbUserReducerfrom from  "../reducers/user"
+import allprdoucts from  "../reducers/getallPrdouctReducer"
 export const store = configureStore({
   reducer: {
-    dbUserReducer:dbUserReducerfrom,
-
+    allprdoucts,
   },
 });

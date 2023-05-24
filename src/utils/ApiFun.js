@@ -16,12 +16,13 @@ export const postRequest = async (url, data) => {
 export const getRequest = async (url) => {
     try {
       const response = await axios.get(url);
-      return response.data;
+      return await response.data;
     } catch (error) {
       console.error('Error in GET request:', error);
       throw error;
     }
   };
+
 
   export const updateRequest = async (url, data) => {
     try {
