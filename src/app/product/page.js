@@ -22,14 +22,13 @@ const Product = () => {
   const data=useSelector((state)=>state?.allprdoucts?.products?.data?.data)
   const isFetching=useSelector((state)=>state?.allprdoucts?.isFetching)
   const error=useSelector((state)=>state?.allprdoucts?.error) 
-  
 
   useEffect(()=>{
     dispatch(GetAllProducts())
     if(error){
       alert.error(error);
     }
-  },[dispatch,error])
+  },[dispatch,error,alert])
 
 
 
@@ -55,7 +54,7 @@ const Product = () => {
               <ProductCard key={index} product={item} img="https://i.ibb.co/DRST11n/1.webp" />
             ))
           ) : (
-            <div className="text-center">No data available</div>
+            <div className="text-center" key={index}>No data available</div>
           )}
         </div>
       </div>

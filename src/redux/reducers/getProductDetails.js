@@ -4,35 +4,35 @@ import { BASE_URL } from "../../utils/BaseUrl";
 import {getRequest} from "../../utils/ApiFun"
 
 const initialState = {
-    products: [],
+    productsDetails: [],
     isFetching:false,
     error:""
 
 };
 
-export const GetAllProducts = createAsyncThunk("GetAllProducts", async () => {
-    const result = await getRequest(`${BASE_URL}/api/v1/products`);
-    let {data,productsCount}=result
-    return {data,productsCount};
+export const GetProDetails = createAsyncThunk("GetProDetails", async (id) => {
+    const result = await getRequest(`${BASE_URL}/api/v1/products/${id}`);
+    console.log(result,"result123456")
+    return result;
 });
   
 const getallPrdouctReducer = createSlice({
-    name: "allproducts",
+    name: "productDetails",
     initialState,
     reducers: {},
     extraReducers: {
-      [GetAllProducts.pending]: (state, action) => {
+      [GetProDetails.pending]: (state, action) => {
         state.isFetching=true
         return state;
       },
-      [GetAllProducts.fulfilled]: (state, action) => {
+      [GetProDetails.fulfilled]: (state, action) => {
         const data = action.payload;
-        state.products = data;
+        state.productsDetails = data;
         state.isFetching=false
         return state;
       },
 
-      [GetAllProducts.rejected]: (state, action) => {
+      [GetProDetails.rejected]: (state, action) => {
         state.isFetching=false
         state.error =action.error.message;
         return state;

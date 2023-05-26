@@ -1,4 +1,4 @@
-"use client"
+"use Client"
 
 const axios = require('axios');
 
@@ -13,10 +13,11 @@ export const postRequest = async (url, data) => {
 };
 
 
-export const getRequest = async (url) => {
+export const  getRequest = async (url) => {
+  
     try {
       const response = await axios.get(url);
-      return await response.data;
+      return  response.data;
     } catch (error) {
       console.error('Error in GET request:', error);
       throw error;
