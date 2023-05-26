@@ -24,10 +24,10 @@ const Header = () => {
 
   return (
     <>
-      <div className=" bg-gradient-to-r from-green-300 via-white to-pink-300 sticky z-50 top-0"
+      <div className=" bg-gradient-to-r from-green-300 via-white to-pink-300 sticky z-40 top-0"
       >
         <nav className="container mx-auto ">
-          <div className=" px-2 sm:px-6 lg:px-8">
+          <div >
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <button
@@ -70,12 +70,14 @@ const Header = () => {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
+              <NextLink href="/" className="flex">
                   <span className=" hidden md:block self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ecomerce</span>
                   <img
                     className="hidden h-8 w-auto lg:block"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                     alt="Your Company"
                   />
+                  </NextLink>
                 </div>
                 <div
                   className="hidden sm:ml-6 sm:block lg:mx-auto"

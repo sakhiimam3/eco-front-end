@@ -1,7 +1,13 @@
-import Footer from './components/footer'
-import Header from './components/header'
+"use client"
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Header from './components/header'
+import FooterBottom from './components/footer'
+import { Provider } from "react-redux";
+import { store } from "../redux/store";
+import { positions, transitions, Provider as AlertProvider } from "react-alert";
+import AlertTemplate from "react-alert-template-basic";
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,13 +17,25 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  const options = {
+    timeout: 5000,
+    position: positions.BOTTOM_CENTER,
+    transition: transitions.SCALE,
+  };
+
   return (
     <html lang="en">
       <body className={inter.className}>
-         <Header />
+        <Header />
+        <Provider store={store}>
+        <AlertProvider template={AlertTemplate} {...options}>
         {children}
-        <Footer />
-        </body>
+        </AlertProvider>
+        </Provider>
+        <FooterBottom />
+      </body>
     </html>
+
+
   )
 }
