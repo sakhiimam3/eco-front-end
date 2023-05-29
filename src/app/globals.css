@@ -75,8 +75,6 @@ p {
   clip-path: polygon(50% 5%, 0% 100%, 100% 100%);
 }
 
-
-
 /* h1 section border style animation  */
 @keyframes borderAnimation {
   0% {
@@ -91,4 +89,19 @@ p {
     transform: scaleX(0);
     transform-origin: bottom right;
   }
+}
+
+/* carosel dot css  */
+
+.carousel .control-dots .dot {
+  background: #410808 !important;
+  border-radius: 50% !important;
+  width: 15px !important;
+  height: 15px !important;
+}
+.carousel.carousel-slider .control-arrow:hover {
+  background: none !important;
+}
+.carousel .carousel-status {
+  color: #dbb9b9 !important;
 }

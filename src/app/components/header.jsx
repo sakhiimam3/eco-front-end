@@ -70,13 +70,13 @@ const Header = () => {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-              <NextLink href="/" className="flex">
-                  <span className=" hidden md:block self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ecomerce</span>
-                  <img
-                    className="hidden h-8 w-auto lg:block"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
-                  />
+                  <NextLink href="/" className="flex">
+                    <span className=" hidden md:block self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Ecomerce</span>
+                    <img
+                      className="hidden h-8 w-auto lg:block"
+                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                      alt="Your Company"
+                    />
                   </NextLink>
                 </div>
                 <div
@@ -103,8 +103,10 @@ const Header = () => {
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center  pr-2 sm:static sm:inset-auto sm:ml-8 sm:pr-0">
 
-                <NextLink href="#" className="">
-                  <button type="button" className="text-white bg-gradient-to-r from-purple-600 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg px-3 py-2" >Register</button>
+                <NextLink href="/signup" className="">
+                  <button type="button" className="text-white bg-gradient-to-r from-purple-600 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg px-3 py-2" >
+                    Register
+                  </button>
                 </NextLink>
 
 

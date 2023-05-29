@@ -2,16 +2,10 @@
 import Link from "next/link";
 import React from "react";
 import ReactStars from "react-rating-stars-component";
+import RatingComponents from "./ratingComponents";
 
 const ProductCard = ({ product, img }) => {
-  const options = {
-    edit: false,
-    color: "rgba(20,20,20,0.1)",
-    activeColor: "tomato",
-    value: product.ratings,
-    ishalf: true,
-    size: 20,
-  };
+
   return (
     <>
       <Link href={`/${product._id}`}>
@@ -30,7 +24,7 @@ const ProductCard = ({ product, img }) => {
               </span>
             </div>
             <div>
-              <ReactStars {...options} />
+              <RatingComponents rating={product.ratings} />
               <span className="text-[grey] text-[13px]">
                 ({product.numOfReviews} Reviews)
               </span>

@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-gradient-to-r from-green-300 via-white to-pink-300 shadow dark:bg-gray-900  ">
-        <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div className="container mx-auto mx-auto p-4 md:py-8">
           <div className=" sm:flex sm:items-center sm:justify-between">
             <Link
               href="https://flowbite.com/"
@@ -29,18 +29,18 @@ const Footer = () => {
               <ul className=" mt-3 flex flex-col gap-3 text-sm font-medium text-graysm:mb-0 dark:text-gray-400">
                 <li className="cursor-pointer flex gap-3 flex-wrap text-[purple] hover:text-[gray] md:text-[17px]">
                   <CiLocationOn />  <span>935-9940 Tortor. Street
-                        Santa Rosa MN</span>
+                    Santa Rosa MN</span>
                 </li>
                 <li className="cursor-pointer  flex gap-3 text-[purple] hover:text-[gray] md:text-[20px]">
                   <FaPhoneAlt />
-                   <span>+9233382002802028</span>
+                  <span>+9233382002802028</span>
                 </li>
               </ul>
             </div>
 
             <ul className="flex flex-wrap mt-3 md:mt-0 gap-10 items-center mb-6 text-sm font-medium text-graysm:mb-0 dark:text-gray-400">
               <li className="cursor-pointer  text-[purple] hover:text-[gray] md:text-[20px]">
-            
+
                 <CiFacebook />
               </li>
               <li className="cursor-pointer  text-[purple] hover:text-[gray] md:text-[20px]">
